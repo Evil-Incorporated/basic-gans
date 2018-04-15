@@ -9,3 +9,5 @@ Our code for training GANs on the MNIST dataset is a minor modification of [pyto
 # LSUN
 We used a DCGAN to train on the LSUN outdoor church (as it was the smallest LSUN dataset), the architecture we implemented is exactly the same as mentioned in this paper [Unsupervised representation learning with deep convolutional generative adversarial networks](https://arxiv.org/pdf/1511.06434.pdf)
 
+# Cycle GAN
+We used the code from [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN) to train our Cycle GAN on the monet2photo dataset, our modified Cycle GAN is also an almost idententical implementation of this with minor modifications to to implement the fused auto-encoders.  
