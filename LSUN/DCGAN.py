@@ -146,7 +146,3 @@ if __name__ == '__main__':
 
     train_network(netD, netG, dataloader)
 
-    # dataiter = iter(dataloader)
-    # image, _ = dataiter.next()
-    #
-    # imshow(image[0])
