@@ -13,6 +13,8 @@ __author__ = 'Fisher Yu'
 __email__ = 'fy@cs.princeton.edu'
 __license__ = 'MIT'
 
+output_directory = './data' # Change this to the name of the directory where you want the dataset to be downloaded
+
 
 def list_categories(tag):
     url = 'http://lsun.cs.princeton.edu/htbin/list.cgi?tag=' + tag
@@ -36,7 +38,7 @@ def download(out_dir, category, set_name, tag):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--tag', type=str, default='latest')
-    parser.add_argument('-o', '--out_dir', default='./data')
+    parser.add_argument('-o', '--out_dir', default=output_directory)
     parser.add_argument('-c', '--category', default='church_outdoor')
     args = parser.parse_args()
 
