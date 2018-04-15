@@ -7,9 +7,9 @@ from torch.utils.data import DataLoader
 from torch.autograd import Variable
 import torch
 
-from CycleGAN.models import Encoder
-from CycleGAN.models import Decoder
-from CycleGAN.dataset import ImageDataset
+from models import Encoder
+from models import Decoder
+from dataset import ImageDataset
 
 activate_cuda = True
 input_nc = 3

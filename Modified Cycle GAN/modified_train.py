@@ -9,13 +9,13 @@ from PIL import Image
 import torch
 import matplotlib.pyplot as plt
 
-from CycleGAN.models import Encoder
-from CycleGAN.models import Decoder
-from CycleGAN.models import DiscriminatorNew
-from CycleGAN.utils import ReplayBuffer
-from CycleGAN.utils import LambdaLR
-from CycleGAN.utils import weights_init_normal
-from CycleGAN.dataset import ImageDataset
+from models import Encoder
+from models import Decoder
+from models import DiscriminatorNew
+from utils import ReplayBuffer
+from utils import LambdaLR
+from utils import weights_init_normal
+from dataset import ImageDataset
 
 
 start_epoch = 0
@@ -207,6 +207,8 @@ for epoch in range(start_epoch, n_epochs):
     loss_D_hist.append(loss_cycle_iter/len(dataloader))
 
     # Save models checkpoints
+    if not os.path.exists('output modified'):
+    	os.makedirs('output modified')
     torch.save(encoder.state_dict(), 'output modified/encoder.pth')
     torch.save(decoder_A2B.state_dict(), 'output modified/encoder_A2B.pth')
     torch.save(decoder_B2A.state_dict(), 'output modified/encoder_B2A.pth')
