@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-lsun_church_dataset_path = './data'
-output_file_path = './DCGAN output'
+lsun_church_dataset_path = './data' # Set the path of LSUN outdoor church dataset here
+output_file_path = './DCGAN output' # Set the output path for the generated images
 
 def imshow(img):
     img = img / 2 + 0.5     # unnormalize
