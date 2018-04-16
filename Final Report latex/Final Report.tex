@@ -72,7 +72,7 @@ The paper proves that when the discriminator $D$ is trained to optimality, train
 
 \section{Deep Convolution GANs}
 \label{deep convolution GANs}
-Out of the many variants in GAN architecture, the deep convolution GAN (DCGAN) is one of the most simple architecture that is widely used, \cite{dcgan} also provides a list of guidelines to follow that has been to been empirically know to give good quality outputs. The guidelines suggested by the paper are:
+Out of the many variants in GAN architecture, the deep convolution GAN (DCGAN) is one of the most simple architecture that is widely used, \cite{dcgan} also provides a list of guidelines to follow that has been empirically know to give good quality outputs. The guidelines suggested by the paper are:
 \begin{itemize}
     \item Replace any pooling layers with strided convolutions (discriminator) and fractional-strided
 convolutions (generator).
@@ -138,7 +138,7 @@ This can be thought as a minimization Linear program under the constraint the \(
  Suppose this function f comes from a family of K-Lipschitz continuous functions, \(\{ f_w \}_{w \in W}\), parameterized by w. In the modified WGAN, the “discriminator” model is used to learn w to find a good \(f_w\) and the loss function is configured as measuring the Wasserstein distance between \(p_r\) and \(p_g\).
 
 \[L(p_r, p_g) = W(p_r, p_g) = \max_{w \in W} \mathbb{E}_{x \sim p_r}[f_w(x)] \]
-\[\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad- \quad \mathbb{E}_{z \sim p_r(z)}[f_w(g_\theta(z))]\]Thus the “discriminator” is not a direct critic of telling the fake samples apart from the real ones anymore. Instead, it is trained to learn a K-Lipschitz continuous function to help compute Wasserstein distance. As the loss function decreases in the training, the Wasserstein distance gets smaller and the generator model’s output grows closer to the real data distribution.
+\[\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad- \quad \mathbb{E}_{z \sim p(z)}[f_w(g_\theta(z))]\]Thus the “discriminator” is not a direct critic of telling the fake samples apart from the real ones anymore. Instead, it is trained to learn a K-Lipschitz continuous function to help compute Wasserstein distance. As the loss function decreases in the training, the Wasserstein distance gets smaller and the generator model’s output grows closer to the real data distribution.
 
 %\section{Dataset description}
 %\label{dataset description}
@@ -160,7 +160,7 @@ In a Cycle GAN we train two GANs in parallel to convert data from domain X to do
 
 \subsection{Proposed modification to the Cycle GAN architecture}
 \label{propsed modification to cycle GAN architecture}
-The architecture proposed in \cite{cyclegan} is based on \cite{perceptual_loss}. We propose I simple modification to this architecture: \newline
+The architecture proposed in \cite{cyclegan} is based on \cite{perceptual_loss}. We propose a simple modification to this architecture: \newline
 Rather than using two separate generators $G$ and $F$ we can use a common encoder and two decoders for each of the domains. The original architecture of the generator is a pair of convolution networks followed by 6 residual blocks and finally a pair of transposed convolution networks for upsampling. Our implementation uses a common encoder for both the GANs that consists of the first two convolution networks followed by 3 residual blocks, and two decoders for domain $X$ and $Y$ consisting of 3 residual blocks followed by 2 transposed convolution layers. It is essentially a partition of the original architecture into an encoder and a decoder.\newline
 This resulted in a much smaller size of the overall network and the training speed increased by more than a factor of 2, however the image quality was relatively poor.
 
@@ -323,7 +323,7 @@ We used the datasets 'monet$\leftrightarrow$photo' , 'winter$\leftrightarrow$sum
         \caption{}
     \end{subfigure}
     
-    \caption{(a) Input (b) Cycle GAN output (c) Fused encoder Cycle GAN output}
+    \caption{Winter to summer conversion on the 'summer$\leftrightarrow$winter' dataset. (a) Input (b) Cycle GAN output (c) Fused encoder Cycle GAN output}
     \label{fig:my_label}
 \end{figure}
 
