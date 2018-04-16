@@ -7,7 +7,7 @@ The code for the toy examples can be found [here](https://gist.github.com/Evil-I
 Our code for training GANs on the MNIST dataset is a minor modification of [pytorch-generative-model-collections](https://github.com/Evil-Incorporated/pytorch-generative-model-collections) by the author [znxlwm](https://github.com/znxlwm)
 
 # LSUN
-We used a DCGAN to train on the LSUN outdoor church (as it was the smallest LSUN dataset), the architecture we implemented is exactly the same as mentioned in this paper [Unsupervised representation learning with deep convolutional generative adversarial networks](https://arxiv.org/pdf/1511.06434.pdf)
+We used a DCGAN to train on the LSUN outdoor church (as it was the smallest LSUN dataset), the architecture we implemented is exactly the same as mentioned in this paper [Unsupervised representation learning with deep convolutional generative adversarial networks](https://arxiv.org/pdf/1511.06434.pdf). It also contains the WGAN implementation for the church dataset that uses the DCGAN architecture
 
 # Cycle GAN
 We used the code from [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN) to train our Cycle GAN on the monet2photo dataset, our modified Cycle GAN is also an almost idententical implementation of this with minor modifications to to implement the fused auto-encoders.  
