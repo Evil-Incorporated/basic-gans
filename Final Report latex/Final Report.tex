@@ -126,7 +126,7 @@ W(p_r, p_g) = \inf_{\gamma \sim \Pi(p_r, p_g)} E_{(x, y) \sim \gamma}[\| x-y \|]
 \]
 where $\gamma \in \Pi(p_r, p_g)$, is the set of all distributions whose marginals are $p_r$ and $p_g$ respectively.\\
 
-In above formulation we have $\inf$ over all valid $\gamma$ which is intractable. In paper, author cleverly convert it into $\sup$ using Kantorovich-Rubinstein duality. Intutively, it can be seen as dual of linear program (refer to this blog).\\
+In above formulation we have $\inf$ over all valid $\gamma$ which is intractable. In paper, author cleverly convert it into $\sup$ using Kantorovich-Rubinstein duality. Intutively, it can be seen as dual of linear program \cite{blog}.\\
 
 Let  \(\mathbf{\Gamma} = \gamma(x,y)\) and \(\mathbf{D} = \Vert x - y \Vert\) , with \( \mathbf{\Gamma}, \mathbf{D} \in \mathbb{R}^{l \times l} \)
 \[\mathrm{EMD}(P_r, P_\theta) = \inf_{\gamma \in \Pi} \, \langle \mathbf{D}, \mathbf{\Gamma} \rangle_\mathrm{F} \]
