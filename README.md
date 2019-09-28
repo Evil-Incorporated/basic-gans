@@ -14,4 +14,5 @@ We used the code from [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-Cyc
 
 # Fused encoder Cycle GAN
 
-We modified the Cycle GAN to fuse the encoders to achive faster convergence at the cost of quality picture generation.Check the [Reports](https://github.com/Evil-Incorporated/basic-gans/tree/master/Reports) folder to see the results.
+We modified the Cycle GAN to fuse the encoders to achive faster convergence at the cost of quality picture generation. Check the 
+[Reports](https://github.com/Evil-Incorporated/basic-gans/tree/master/Reports) folder to see the results.
