@@ -11,3 +11,7 @@ We used a DCGAN to train on the LSUN outdoor church (as it was the smallest LSUN
 
 # Cycle GAN
 We used the code from [PyTorch-CycleGAN](https://github.com/aitorzip/PyTorch-CycleGAN) to train our Cycle GAN on the monet2photo dataset, our modified Cycle GAN is also an almost idententical implementation of this with minor modifications to to implement the fused auto-encoders.  
+
+# Fused encoder Cycle GAN
+
+We modified the Cycle GAN to fuse the encoders to achive faster convergence at the cost of quality picture generation.Check the report folder to see the results.
